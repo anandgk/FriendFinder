@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+  <!-- HEADER SECTION -->
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Find Lazy Friends">
+    <meta name="author" content="Anand Gopalakrishnan">
+
+    <title>LAZY Friend Finder Survey</title>
+    
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+  </head>
+
+  <!-- STYLE SECTION -->
+  <style>
+  .imageSize{
+    height: 150px;
+    width: 300px;
+  }
+  </style>
+
+  <body>
+    
+    <!-- MODEL WINDOW -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h4 class="modal-title text-center">Your other Lazy buddy!!</h4>
+          </div>
+
+          <div class="modal-body text-center">
+              <div class="buddyName"></div>
+              <img class="imageSize userImg"></img>
+          </div>
+          
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div><
+
+    <!-- DISPLAY AREA -->
+    <div class="container">
+
+      <h2>LAZY Friend Finder - Survey Questions</h2>
+      <hr>
+      <br>
+      <br>
+      <div id="yourMatch"></div>
+      <h3><strong>Lazy About You</strong></h3>
+
+      <br>
+
+      <h4>Name (Required)</h4>
+      <input type="text" name id="name" class="form-control" required>
+      <h4>Link to your Lazy profile image (Required)</h4>
+      <input type="text" name id="profileImage" class="form-control" required>
+
+      <hr>
+        <form role="form">
+            <div class="form-group">
+                <label for="q1"><h3><strong>First Question</strong></h3><h4>Did you read the whole heading that I wrote?</h4></label>
+                <select class="form-control" id="q1" style="width: 400px">
+                  <option value="1">The first 2/3 of it</option>
+                  <option value="2">Haha no</option>
+                  <option value="3">Yes of course</option>
+                  <option value="4">The first 2 words</option>
+                  <option value="5">huh maybe..</option>
+                </select>
+
+                <br>
+                <hr>
+
+                <label for="q2"><h3><strong>Second Question</strong></h3><h4>How long does it take you to get out of bed in the morning (Or after how many snoozes)?/h4></label>
+                <select class="form-control" id="q2" style="width: 400px">
+                  <option value="1">3-5 minute snoozes</option>
+                  <option value="2">Maybe 3 minutes</option>
+                  <option value="3">I get right up</option>
+                  <option value="4">UMMMMM.... An hour</option>
+                  <option value="5">Who cares..</option>
+                </select>
+
+                <br>
+                <hr>
+
+                <label for="q3"><h3><strong>Third Question</strong></h3><h4>A door is open and you want to close it. Did you?</h4></label>
+                <select class="form-control" id="q3" style="width: 400px">
+                  <option value="1">Struggle and gasp for breath dramatically and then go and close it</option>
+                  <option value="2">Yell until someone closes it for me</option>
+                  <option value="3">I am too lazy to yell or get up and close it... Whatever</option>
+                  <option value="4">Go close it</option>
+                  <option value="5">I don't have anything for the thief to steal :)</option>
+                </select>
+
+                <br>
+                <hr>
+
+                <label for="q4"><h3><strong>Fourth Question</strong></h3><h4>A DVD is up 2 stories and you have free access to it, you were planning on watching it tonight. What did you do?</h4></label>
+                <select class="form-control" id="q4" style="width: 400px">
+                  <option value="1">Um it's only 5$ on my iPad... Haha I will just buy it</option>
+                  <option value="2">Get my younger sister to Carry me for 1$</option>
+                  <option value="3">Grasp the handrail and half pull myself up/ crawl like a dog up the stairs while screaming in agony</option>
+                  <option value="4">Climb the stairs to go get it</option>
+                  <option value="5">Invite a friend, ask him to get beer, when he arrives, tell him to get the DVD</option>
+                </select>
+
+                <br>
+                <hr>
+
+                <label for="q5"><h3><strong>Fifth Question</strong></h3><h4>You forget to brush your teeth again for the time before going to bed which you are in comfortably ( I'm saying this as if you always do). What did you do?</h4></label>
+                <select class="form-control" id="q5" style="width: 400px">
+                  <option value="1">Get my sister to bring me my toothbrush</option>
+                  <option value="2">Contemplate leaving my bed for 4 minutes then struggle out of my bed and sluggishly go brush them</option>
+                  <option value="3">Go brush my teeth</option>
+                  <option value="4">Cry, but then go to sleep</option>
+                  <option value="5">Who cares..</option>
+                </select>
+
+                <br>
+                <hr>
+
+                <label for="q6"><h3><strong>Sixth Question</strong></h3><h4>You have a sign up sheet due tomorrow that you have to fill out, it will take 30-40 minutes to do if you go at full speed, now long does it take you to actually finish it?</h4></label>
+                <select class="form-control" id="q6" style="width: 400px">
+                  <option value="1">30-40 minutes duh</option>
+                  <option value="2">Try to get my mother to write it... Or not do it</option>
+                  <option value="3">Haha 1:30</option>
+                  <option value="4">Probably an hour</option>
+                  <option value="5">Find an excuse to give</option>
+                </select>
+
+                <br>
+                <hr>
+
+                <label for="q7"><h3><strong>Seventh Question</strong></h3><h4>Do you workout?</h4></label>
+                <select class="form-control" id="q7" style="width: 400px">
+                  <option value="1">Like 2 times a week</option>
+                  <option value="2">Hehe look how my tummy jiggles</option>
+                  <option value="3">Once a month</option>
+                  <option value="4">Yes! Everyday!</option>
+                  <option value="5">What a waste of time!</option>
+                </select>
+
+                <br>
+                <hr>
+
+                <label for="q8"><h3><strong>Eighth Question</strong></h3><h4>In a scenario: Your house is flooding in the basement a foot deep each minute soon to rise into the house...What do you do?</h4></label>
+                <select class="form-control" id="q8" style="width: 400px">
+                  <option value="1">Call a plumber and try to stop the leak while your waiting</option>
+                  <option value="2">Have your mom call a plumber and get a raft to sleep on while they fix the problem</option>
+                  <option value="3">Get your ducky floaters on and jump right in!</option>
+                  <option value="4">Call 911</option>
+                  <option value="5">Curse at someone</option>
+                </select>
+
+                <br>
+                <hr>
+
+                <label for="q9"><h3><strong>Ninth Question</strong></h3><h4>You really need to go to the restroom. What was your immediate reaction?</h4></label>
+                <select class="form-control" id="q9" style="width: 400px">
+                  <option value="1">Continue to sit for a few minutes and then go to the bathroom</option>
+                  <option value="2">Convince yourself that you really don't have to go so that you won't have to get up</option>
+                  <option value="3">Well, duh. You would go to the bathroom!</option>
+                  <option value="4">Continue to sit until the moment arrives</option>
+                  <option value="5">Find the nearest open window</option>
+                </select>
+
+                <br>
+                <hr>
+
+                <label for="q10"><h3><strong>Tenth Question</strong></h3><h4>You want to watch TV, but you can't find the remote.</h4></label>
+                <select class="form-control" id="q10" style="width: 400px">
+                  <option value="1">Push the power button on the TV. DUH!</option>
+                  <option value="2">Are too lazy to tell your little bro/sis to find the remote, so you continue to sit on the couch until you get soooooo bored that you fall asleep</option>
+                  <option value="3">Make your little brother/sister find the remote</option>
+                  <option value="4">Try to find the remote</option>
+                  <option value="5">Use the IPad</option>
+                </select>
+            </div>
+        </form>
+
+        <br>
+        <br>
+        <br>
+
+        <button type="submit" class="btn btn-primary btn-lg" id="submit">Submit Answers</button>
+    </div>
+
+    <br>
+    <hr>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <a href="/api/friends">API Friends Lazy List</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- APP DEFINED JAVASCRIPT -->
+    <script type="text/javascript">
+      $('#submit').on("click", function() {
+        var nameOfUser = $('#name').val().length;
+        var photoOfUser = $('#profileImage').val().length;
+
+        var userInput = {
+          name: $('#name').val(),
+          photo: $('#profileImage').val(),
+          scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+        }
+
+        var currentURL = window.location.origin;
+
+        $.post(currentURL + "/api/friends", userInput, function(data){
+
+          $('.buddyName').html(data.name);
+          $('.userImg').attr("src", data.photo);
+          $('#myModal').modal('show');   
+
+        });
+
+        return false;
+          
+      }); 
+
+    </script>
+
+  </body>
+</html>
